@@ -1,0 +1,232 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+  font: 'Roboto Condensed';
+  font-weight: 300;
+  color: black;
+  background: white;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 4;
+  transition: 1s;
+  -webkit-transition: 1s;
+  width: 100%;
+  height: 5vw;
+}
+header a {
+  transition: 1s;
+}
+
+h1 {
+  color: white;
+  font-size: 5vw !important;
+}
+h1 + h2 {
+  color: white !important;
+  /* top: 30vw !important; */
+  top: 53% !important;
+}
+section {
+  position: relative;
+  height: 40vw;
+  padding: 10vw;
+}
+img {
+  width: 100%;
+}
+
+.hamburger-inner:before, .hamburger-inner:after, .hamburger-inner {
+  background-color: white !important;
+}
+.no-padding {
+  padding: 0 !important;
+}
+.no-padding-left {
+  padding-left: 0 !important;
+}
+.no-padding-right {
+  padding-right: 0 !important;
+}
+.no-padding-bottom {
+  padding-bottom: 0 !important;
+}
+.no-padding-top {
+  padding-top: 0 !important;
+}
+
+.centered-absolute {
+  top: 50%;
+  transform: translateY(-50%);
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  margin: auto;
+}
+
+.welcome {
+  white-space: nowrap;
+  top: 23vw;
+}
+
+.centered-relative {
+  display: block;
+  position: relative;
+  margin: auto;
+}
+
+.background-image {
+  background-position: center center;
+  background-size: cover;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  position: relative;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+}
+.navigation .logo {
+  width: 3vw;
+  position: relative;
+  top: 0vw;
+  left: 1vw;
+}
+
+.navigation-container {
+  background: rgba(0,0,0,0) !important;
+  display: flex;
+  width: 65%;
+  margin: auto;
+  margin-left: 40%;
+  margin-right: 10%;
+  position: relative;
+}
+
+.navigation li {
+  flex-grow: 1;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  align-content: center;
+}
+
+a.navigation__link {
+  font-family: 'Roboto Condensed';
+  font-weight: 700;
+  text-align: center;
+  color: white;
+  position: relative;
+  text-decoration: none;
+  line-height: 2vw;
+  width: 80%;
+  margin: auto;
+}
+
+.tree-container {
+  background-image: url('../img/path.jpg');
+  background-position: center;
+  background-size: cover;
+  /* -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%);
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%); */
+  left: 0;
+  width: 100%;
+  height: 768px;
+  position: relative;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 768px) {
+  header.minimized {
+    background: #1c1c1c !important;
+    box-shadow: 3px 3px 3px black !important;
+    height: 3.8vw;
+  }
+  .hamburger {
+    display: none !important;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  header {
+    width: 30%;
+    left: -32%;
+    height: 100%;
+    transition: 1s;
+    background: #1c1c1c !important;
+    box-shadow: 3px 3px 3px black !important;
+  }
+  div.navigation{
+    background: #1c1c1c !important;
+  }
+  header.is-active {
+    left: 0;
+  }
+  .hamburger {
+    top: 0%;
+    left: 0%;
+    position: fixed;
+    z-index: 4;
+  }
+  .navigation-container {
+    flex-direction: column;
+    margin: auto;
+    margin-top: 65%;
+  }
+  ul.navigation-container li {
+    margin: 5vw 0 5vw 0;
+    width: 100%;
+  }
+  ul.navigation-container li a {
+    text-align: left;
+  }
+  .navigation__link {
+    border-top: 0;
+    width: 100%;
+    text-align: left;
+  }
+  a.navigation__link::after, a.navigation__link::before {
+    display: none;
+  }
+  .tree-container {
+    height: 96vw;
+    transition: 1s;
+  }
+  .tree-container {
+    height: 160.2vw;
+  }
+  .tree-container__header {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1367px) {
+  a.navigation__link {
+    font-size: 1.5vw;
+    line-height: 2.5vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  header.minimized {
+    background: white !important;
+    box-shadow: 3px 3px 13px black !important;
+    height: 3.8vw !important;
+  }
+  header.minimized a {
+    color: black !important;
+  }
+  .hamburger {
+    display: none !important;
+  }
+}
