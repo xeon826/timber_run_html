@@ -12,7 +12,8 @@ body {
   font: 'Roboto Condensed';
   font-weight: 300;
   color: white;
-  background: black !important;
+  /* background: black !important; */
+  background: none #141414 !important
 }
 
 header {
@@ -186,7 +187,7 @@ a.navigation__link {
   padding: 5vw;
 }
 .tree-container__fb {
-  background: rgb(224, 180, 93);
+  background: rgb(224, 180, 93) !important;
   left: 70%;
   top: 50%;
   width: 15vw;
@@ -313,11 +314,31 @@ a.navigation__link {
     display: none;
   }
 }
-#about-us {
+#our-motto {
   /* background: green; */
-  background-image: url(../img/hardwood.jpg);
+  background-image: url(../img/bathroom-background.jpg);
+  background-attachment: fixed;
   background-size: 100%;
   color: white;
+}
+#our-motto  {
+  text-align: right;
+}
+#aspects-of-carpentry {
+  min-height: 30vw;
+  padding-top: 10vw;
+  padding-bottom: 10vw;
+}
+#aspects-of-carpentry .col-sm-4{
+  /* border: 1px solid brown; */
+  border: 1px solid #444 !important
+}
+.our-motto__supporting-image {
+  background: url(../img/patio-background.jpg);
+  text-align: center;
+  width: 15vw;
+  height: 15vw;
+  background-size: 200%;
 }
 #gallery {
   background-image: url(../img/tiles.jpg);
@@ -358,4 +379,8 @@ footer {
 }
 .design-by {
   text-align: right;
+}
+.quote {
+  font-weight: 1000;
+  color: #CCC !important;
 }

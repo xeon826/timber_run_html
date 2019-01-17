@@ -6,7 +6,7 @@ $(document).ready(function() {
   // skillBar();
   minimizeHeader();
   // lazyLoad();
-  parallax();
+  // parallax();
   // fadeServicesIn();
 })
 
