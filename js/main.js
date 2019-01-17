@@ -6,7 +6,7 @@ $(document).ready(function() {
   // skillBar();
   minimizeHeader();
   // lazyLoad();
-  // parallax();
+  parallax();
   // fadeServicesIn();
 })
 
@@ -61,7 +61,7 @@ function parallax() {
   }
   $(window).scroll(function() {
     var scrollTop = $(window).scrollTop();
-    $('.section__quote').each(function() {
+    $('section').each(function() {
       var distance = scrollTop - $(this).offset().top + $(this).height() * 2 + mobile;
       $(this).css('background-position-y', (distance / 65) + '%')
     })

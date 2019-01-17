@@ -3,12 +3,16 @@
   padding: 0;
 }
 
+html, body{
+  max-width: 100%;
+  overflow-x: hidden;
+}
 
 body {
   font: 'Roboto Condensed';
   font-weight: 300;
-  color: black;
-  background: white;
+  color: white;
+  background: black !important;
 }
 
 header {
@@ -27,20 +31,39 @@ header a {
 
 h1 {
   color: white;
-  font-size: 5vw !important;
+  text-transform: uppercase;
+  text-align: center;
 }
 h1 + h2 {
   color: white !important;
-  /* top: 30vw !important; */
-  top: 53% !important;
+  top: 58% !important;
+  text-align: center;
 }
 section {
   position: relative;
-  height: 40vw;
   padding: 10vw;
+  padding-top: 3vw;
+  padding-bottom: 3vw;
+  margin-top: 7vw;
+  margin-bottom: 7vw;
+  /* background: #464555; */
 }
 img {
-  width: 100%;
+  max-width: 100%;
+}
+h2 {
+  padding: 0.5vw 0 0.5vw 0;
+  /* background: none #28313E !important; */
+  /* padding: 0.5vw;
+  -webkit-clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
+  clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
+  text-align: center; */
+}
+h2, p {
+  color: white !important;
+}
+p {
+  font-weight: bold;
 }
 
 .hamburger-inner:before, .hamburger-inner:after, .hamburger-inner {
@@ -97,7 +120,7 @@ img {
   height: 100%;
 }
 .navigation .logo {
-  width: 3vw;
+  width: 10vw;
   position: relative;
   top: 0vw;
   left: 1vw;
@@ -134,16 +157,103 @@ a.navigation__link {
 }
 
 .tree-container {
-  background-image: url('../img/path.jpg');
+  background-image: url('../img/wood.jpeg');
   background-position: center;
   background-size: cover;
-  /* -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%);
-  clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%); */
   left: 0;
   width: 100%;
-  height: 768px;
+  height: 100vh;
   position: relative;
   overflow: hidden;
+}
+.hexagon {
+  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  display: flex;
+  align-items: center;
+  align-content: center;
+  position: absolute;
+}
+.tree-container__preview-image {
+  background: url(../img/patio.jpg);
+  background-repeat: no-repeat;
+  background-size: 150%;
+  background-position: center;
+  left: 45%;
+  top: 15%;
+  width: 35vw;
+  height: 35vw;
+  padding: 5vw;
+}
+.tree-container__fb {
+  background: rgb(224, 180, 93);
+  left: 70%;
+  top: 50%;
+  width: 15vw;
+  height: 15vw;
+  padding: 5vw;
+}
+.right-arrow {
+  -webkit-clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
+  clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
+  position: absolute;
+  background: #232B4B !important;
+  right: 8%;
+  bottom: 32%;
+  margin: auto;
+  width: 1vw;
+  height: 1vw;
+}
+.tree-container__fb h2 {
+  font-weight: bold;
+  /* max-width: 50%; */
+  text-align: right;
+  color: #232B4B !important;
+
+
+}
+.tree-container__supporting-text {
+  top: 40% !important;
+  left: 30%;
+  z-index: 2;
+  max-width: 30vw;
+}
+.tree-container__supporting-text h1, .tree-container__supporting-text h2 {
+  text-align: left;
+}
+.tree-container__banner-image {
+  z-index: 1;
+  width: 10%;
+}
+.tree-container__shader {
+  background: rgba(0,0,0,0.3);
+  position: absolute;
+}
+.tree-container__shader--left {
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 25%;
+}
+.tree-container__shader--right {
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 5%;
+}
+.tree-container__shader__icon {
+  width: 50%;
+  top: 50%;
+  position: relative;
+  margin: auto;
+  display: block;
+}
+.tree-container__shader h3 {
+  transform: rotate(-90deg);
+  position: absolute;
+  color: white;
+  bottom: 25%;
+  left: -30%;
 }
 
 @media screen and (min-width: 768px) {
@@ -199,16 +309,25 @@ a.navigation__link {
   a.navigation__link::after, a.navigation__link::before {
     display: none;
   }
-  .tree-container {
-    height: 96vw;
-    transition: 1s;
-  }
-  .tree-container {
-    height: 160.2vw;
-  }
   .tree-container__header {
     display: none;
   }
+}
+#about-us {
+  /* background: green; */
+  background-image: url(../img/hardwood.jpg);
+  background-size: 100%;
+  color: white;
+}
+#gallery {
+  background-image: url(../img/tiles.jpg);
+  background-size: 100%;
+  color: white;
+}
+.section__support-text {
+  background: rgba(0,0,0,0.5);
+  padding: 3vw 0 3vw 0;
+  color: white;
 }
 
 @media screen and (min-width: 1367px) {
@@ -229,4 +348,14 @@ a.navigation__link {
   .hamburger {
     display: none !important;
   }
+}
+footer {
+  /* height: 10vh; */
+  background: green;
+  padding: 1vw 4vw 1vw 4vw;
+  background: none #28313E !important;
+  color: black;
+}
+.design-by {
+  text-align: right;
 }
