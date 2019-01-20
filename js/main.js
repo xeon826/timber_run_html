@@ -5,7 +5,7 @@ $(document).ready(function() {
   hamburger();
   // skillBar();
   minimizeHeader();
-  // lazyLoad();
+  lazyLoad();
   // parallax();
   // fadeServicesIn();
 })
@@ -17,15 +17,10 @@ function navigationTriggerScroll() {
 }
 
 function lazyLoad() {
-  $('.tree-container .box').each(function(i, obj) {
-    setTimeout(function() {
-      $(obj).addClass('box--opaque');
-    }, 500 * i)
-  });
   $('.tree-container').imagesLoaded({
     background: true
   }).done(function() {
-    $('.section__quote').each(function() {
+    $('.background').each(function() {
       if ($(window).innerWidth() > 600)
         $(this).css('background', $(this).data('background'));
       else
