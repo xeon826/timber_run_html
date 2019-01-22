@@ -478,7 +478,13 @@ footer {
   color: #fff;
   background-color: #007bff;
   border-color: #007bff;
+  margin: 20px;
+  position: relative;
+  display: block;
 }
-.services-button {
-  
+.tree-container--about {
+  background: url(../img/tools.jpg);
+}
+.section__supporting-text ul {
+  margin-left: 50px;
 }
